@@ -6,17 +6,11 @@ import MyCounter from './components/MyCounter.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-      <MyCounter />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
+    <nav>
+      <RouterLink to="/ex1">ex1</RouterLink>
+      <RouterLink to="/ex2">ex2</RouterLink>
+      <RouterLink to="/ex3">ex3</RouterLink>
+    </nav>
   </header>
 
   <RouterView />
