@@ -12,6 +12,7 @@ import MyCounter from './components/MyCounter.vue'
       <RouterLink to="/ex3">ex3</RouterLink>
       <RouterLink to="/ex4">ex4</RouterLink>
       <RouterLink to="/ex5">ex5</RouterLink>
+      <RouterLink to="/ex6">ex6</RouterLink>
     </nav>
   </header>
 
