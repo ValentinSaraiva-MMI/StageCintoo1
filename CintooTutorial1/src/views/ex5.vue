@@ -4,7 +4,7 @@ import { ref } from 'vue'
 const awesome = ref(true)
 
 function toggle() {
-  awesome.value = !awesome.value
+  awesome.value = !awesome.valuew
   console.log(awesome.value)
 }
 </script>

@@ -56,6 +56,38 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/ex6.vue')
+    },
+    {
+      path: '/ex7',
+      name: 'ex7',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/ex7.vue')
+    },
+    {
+      path: '/ex8',
+      name: 'ex8',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/ex8.vue')
+    },
+    {
+      path: '/cycle',
+      name: 'cycle',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/cycle.vue')
+    },
+    {
+      path: '/ex9',
+      name: 'ex9',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/ex9.vue')
     }
   ]
 })
