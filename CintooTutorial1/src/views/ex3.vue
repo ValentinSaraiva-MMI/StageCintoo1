@@ -1,12 +1,12 @@
 <script setup>
 import { ref } from 'vue'
 
-let count = ref(0)
+const count = ref(0)
 
 function increment() {
-  count.value++
-  console.log(count)
+  console.log(count.value++)
 }
+count
 </script>
 
 <template>
