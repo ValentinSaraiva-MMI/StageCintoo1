@@ -101,6 +101,24 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/ex10.vue')
+    },
+    {
+      path: '/ex11',
+      name: 'ex11',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/ex11.vue')
+    },
+    {
+      path: '/ex12',
+      name: 'ex12',
+      component: () => import('../views/ex12.vue')
+    },
+    {
+      path: '/sandbox',
+      name: 'sandbox',
+      component: () => import('../views/sandbox.vue')
     }
   ]
 })

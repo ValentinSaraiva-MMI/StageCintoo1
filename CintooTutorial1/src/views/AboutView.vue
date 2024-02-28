@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 
+const test = ref('')
+
 const items = ref([
   { id: 1, text: 'test' },
   { id: 2, text: 'test2' },
@@ -77,6 +79,12 @@ const flavorsArray = ref([])
         {{ text }}
       </li>
     </ul>
+
+    <div>
+      <input v-model="test" type="text" placeholder="text" />
+
+      <p>{{ test }}</p>
+    </div>
   </div>
 </template>
 
