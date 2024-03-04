@@ -1,11 +1,11 @@
 <script setup>
 import {
   onBeforeMount,
-  onBeforeUnmount,
-  onBeforeUpdate,
   onMounted,
-  onUnmounted,
+  onBeforeUpdate,
   onUpdated,
+  onBeforeUnmount,
+  onUnmounted,
   ref
 } from 'vue'
 

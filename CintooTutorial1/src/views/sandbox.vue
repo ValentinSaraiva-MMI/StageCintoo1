@@ -1,11 +1,17 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
+
+import ChildComptSand from '../components/ChildComptSand.vue'
 
 const values = ref([
   { id: 1, text: 'text1' },
   { id: 2, text: 'text2' },
   { id: 3, text: 'text3' }
 ])
+
+import JSConfetti from 'js-confetti'
+
+const confetti = new JSConfetti()
 
 const author = ref({
   name: 'Valentin Saraiva',
@@ -33,6 +39,30 @@ function changecolor() {
     titleClass.value = 'red'
   }
 }
+
+function counterchange() {
+  console.log('Hello, tu viens de changer la valeur de count non ;) ')
+}
+
+watch(counter, () => {
+  if (counter.value == 5) {
+    confetti.addConfetti()
+  } else {
+    return
+  }
+})
+
+const publishedBooksMessage = computed(() => {
+  return author.value.books.length > 0 ? 'yes' : 'no'
+})
+
+const oddorEvent = computed(() => {
+  if (counter.value % 2 === 0) {
+    return 'even'
+  } else {
+    return 'odd'
+  }
+})
 </script>
 
 <template>
@@ -57,7 +87,15 @@ function changecolor() {
   <input v-model="character" type="text" placeholder="tape du text ici" />
   <p>{{ character.length }} /200</p>
 
-  <span>{{ author.books.length > 0 ? 'yes' : 'no' }}</span>
+  <span>{{ publishedBooksMessage }}</span>
+
+  <button @click="counter--">-</button>
+  <span>{{ counter }}</span>
+  <button @click="counter++">+</button>
+
+  <p>le counter est : {{ oddorEvent }}</p>
+
+  <ChildComptSand msg="bangarang" />
 </template>
 
 <style scoped>
